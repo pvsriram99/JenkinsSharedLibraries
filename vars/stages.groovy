@@ -6,10 +6,10 @@ def call(String stageName){
      }
   else if ("${stageName}" == "SonarQube Report")
      {
-       sh "${mavenhome}/bin/mvn clean sonar:sonar"
+       sh "mvn clean sonar:sonar"
      }
   else if ("${stageName}" == "Upload Into Nexus")
      {
-       sh "${mavenhome}/bin/mvn clean deploy"
+       sh "mvn clean deploy"
      }
 }
